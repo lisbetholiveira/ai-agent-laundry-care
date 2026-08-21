@@ -19,11 +19,11 @@ The system was designed to reduce common laundry mistakes such as:
 
 Instead of relying on one general-purpose response, the solution decomposes the problem across specialised agents and then combines their outputs into one final user-facing recommendation.
 
-The original academic project defined the **multi-agent architecture and prompt logic**. This portfolio version goes one step further by implementing that architecture as a **working rule-based Python prototype**.
+The original academic project defined the **multi-agent architecture and prompt logic**. This portfolio version goes one step further by implementing that architecture as a **working rule-based Python prototype with both CLI and Streamlit interfaces**.
 
 ## Functional Python prototype
 
-The repository now includes an executable implementation of the workflow:
+The repository includes an executable implementation of the workflow:
 
 ```text
 User input
@@ -47,7 +47,35 @@ Laundry Request Classifier
 
 The prototype is intentionally **deterministic and rule-based** rather than dependent on an external LLM API. This makes the orchestration, routing and specialist decision logic directly inspectable and runnable without credentials or paid services.
 
-### Run it
+## Interactive Streamlit interface
+
+A lightweight web interface is included in [`streamlit_app.py`](streamlit_app.py). It allows a user to:
+
+- enter a laundry-care request in natural language,
+- try predefined examples,
+- receive the final recommendation,
+- see whether a request was completed, rejected or redirected,
+- inspect the complete agent execution trace.
+
+The interface makes the agent workflow easier to demonstrate to non-technical users while keeping the underlying orchestration visible.
+
+### Run the web interface locally
+
+Install the dependency:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then launch Streamlit:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+The application will open in the browser and can be used without an API key.
+
+## Command-line interface
 
 From the repository root:
 
@@ -63,7 +91,7 @@ python app.py "How should I wash a white wool jumper with a wine stain?" --debug
 
 The debug mode exposes the structured outputs produced at each stage, making the orchestration easier to inspect and troubleshoot.
 
-### Run the tests
+## Run the tests
 
 ```bash
 python -m unittest discover -s tests -v
@@ -81,6 +109,8 @@ The test suite covers:
 ```text
 ai-agent-laundry-care/
 ├── app.py
+├── streamlit_app.py
+├── requirements.txt
 ├── laundry_care/
 │   ├── __init__.py
 │   ├── agents.py
@@ -177,21 +207,23 @@ A portfolio version of the original prompt design is available in [`prompts/agen
 - Conflict-aware decision logic
 - Debuggable execution traces
 - Unit testing
+- Streamlit interface development
+- Translation of backend workflow logic into a user-facing prototype
 - Human-friendly response synthesis
 - Translation of a conceptual AI architecture into a working prototype
 
 ## Project status
 
-**Working portfolio prototype.**
+**Working portfolio prototype with CLI and web interface.**
 
-The repository now contains both the original system-design documentation and a functional Python implementation of the workflow. The current prototype is rule-based and educational; it is **not** a production laundry-care service, does not provide guaranteed garment-care correctness and is not yet connected to an LLM or external product interface.
+The repository contains the original system-design documentation, a functional Python implementation of the workflow and a Streamlit interface for interactive demonstration. The current prototype is rule-based and educational; it is **not** a production laundry-care service and does not provide guaranteed garment-care correctness.
 
 Possible future iterations include:
 
 - optional LLM-backed specialist agents,
 - richer confidence and uncertainty handling,
 - expanded fabric and stain taxonomies,
-- a simple web interface,
+- public deployment of the Streamlit demo,
 - logging and evaluation datasets.
 
 ## Documentation
@@ -205,4 +237,4 @@ Possible future iterations include:
 
 ### About this portfolio project
 
-This repository reframes an academic group project as a professional case study focused on **agent architecture, orchestration, scope control and implementation**.
+This repository reframes an academic group project as a professional case study focused on **agent architecture, orchestration, scope control, implementation and user-facing prototyping**.
