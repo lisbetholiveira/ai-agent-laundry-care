@@ -1,0 +1,12 @@
+[project]
+name = "laundry-care-agent"
+version = "0.1.0"
+description = "Rule-based multi-agent Python prototype for laundry-care decisions."
+requires-python = ">=3.10"
+authors = [
+  {name = "Lisbeth Chavez Oliveira"},
+  {name = "Luiza Callizo"}
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
