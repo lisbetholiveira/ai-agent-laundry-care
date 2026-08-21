@@ -6,6 +6,12 @@
 **Module:** Introduction to Artificial Intelligence  
 **Co-developed by:** Lisbeth Chavez Oliveira & Luiza Callizo
 
+## Live demo
+
+👉 **[Try the Laundry Care Agent](https://ai-agent-laundry-care-ntwvxrdkvgq9ur2oqgybc7.streamlit.app)**
+
+The Streamlit demo lets users submit a laundry-care request, test predefined examples and inspect the execution trace across the different workflow stages.
+
 ## Project overview
 
 Laundry decisions often involve several variables at once. A single garment can require different rules because of its fabric, colour and stain type, and those rules may conflict.
@@ -211,7 +217,6 @@ A portfolio version of the original prompt design is available in [`prompts/agen
 ## What this project demonstrates
 
 - AI-assisted Python prototyping
-- Translation of an existing AI concept into an executable workflow
 - Multi-agent system decomposition
 - Sequential workflow orchestration
 - Task routing and classification
@@ -220,23 +225,23 @@ A portfolio version of the original prompt design is available in [`prompts/agen
 - Structured outputs with Python dataclasses
 - Conflict-aware decision logic
 - Debuggable execution traces
-- Test-driven validation of key workflow behaviours
-- AI-assisted Streamlit interface prototyping
+- Unit testing
+- Streamlit interface prototyping
 - Translation of backend workflow logic into a user-facing prototype
+- Implementation literacy and iterative AI-assisted development
 - Human-friendly response synthesis
 
 ## Project status
 
-**Working portfolio prototype with CLI and web interface.**
+**Working portfolio prototype with public web demo.**
 
-The repository contains the original system-design documentation, an AI-assisted Python implementation of the workflow and a Streamlit interface for interactive demonstration. The current prototype is rule-based and educational; it is **not** a production laundry-care service and does not provide guaranteed garment-care correctness.
+The repository contains the original system-design documentation, a functional Python implementation of the workflow and a Streamlit interface for interactive demonstration. The current prototype is rule-based and educational; it is **not** a production laundry-care service and does not provide guaranteed garment-care correctness.
 
 Possible future iterations include:
 
 - optional LLM-backed specialist agents,
 - richer confidence and uncertainty handling,
 - expanded fabric and stain taxonomies,
-- public deployment of the Streamlit demo,
 - logging and evaluation datasets.
 
 ## Documentation
@@ -250,4 +255,4 @@ Possible future iterations include:
 
 ### About this portfolio project
 
-This repository reframes and extends an academic group project as a professional case study focused on **agent architecture, orchestration, scope control, AI-assisted implementation and user-facing prototyping**.
+This repository reframes an academic group project as a professional case study focused on **agent architecture, orchestration, scope control, implementation and user-facing prototyping**.
