@@ -1,8 +1,11 @@
 [project]
 name = "laundry-care-agent"
-version = "0.1.0"
-description = "Rule-based multi-agent Python prototype for laundry-care decisions."
+version = "0.2.0"
+description = "Rule-based multi-agent Python prototype for laundry-care decisions with a Streamlit interface."
 requires-python = ">=3.10"
+dependencies = [
+  "streamlit>=1.36,<2"
+]
 authors = [
   {name = "Lisbeth Chavez Oliveira"},
   {name = "Luiza Callizo"}
