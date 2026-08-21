@@ -1,6 +1,6 @@
 # Laundry Care Agent — Multi-Agent AI System
 
-> Multi-agent laundry-care system with a functional Python prototype that routes requests through guardrails, classification, specialist agents and final-response synthesis.
+> Multi-agent laundry-care system originally developed as an academic AI project and later extended into a functional Python and Streamlit prototype through AI-assisted development.
 
 **Context:** Postgraduate Programme in Artificial Intelligence applied to Marketing — IPAM  
 **Module:** Introduction to Artificial Intelligence  
@@ -19,7 +19,20 @@ The system was designed to reduce common laundry mistakes such as:
 
 Instead of relying on one general-purpose response, the solution decomposes the problem across specialised agents and then combines their outputs into one final user-facing recommendation.
 
-The original academic project defined the **multi-agent architecture and prompt logic**. This portfolio version goes one step further by implementing that architecture as a **working rule-based Python prototype with both CLI and Streamlit interfaces**.
+The original academic project defined the **multi-agent architecture, prompt logic and workflow** in a professor-guided assignment, using OpenAI tools as part of the design and prototyping process.
+
+This portfolio version extends that original work into a **working rule-based Python prototype with CLI and Streamlit interfaces**, created through **AI-assisted development**.
+
+## Development approach & authorship
+
+This project intentionally distinguishes between **system design** and **software implementation**.
+
+- The original multi-agent concept, agent roles, routing logic and prompt structure were developed as part of the academic project.
+- OpenAI tools were used to support the original design and prototyping process.
+- The later Python and Streamlit implementation was produced through AI-assisted coding, translating the existing architecture into an executable prototype.
+- The purpose of this portfolio version is to demonstrate the ability to define a problem, structure an agentic workflow, direct AI-assisted implementation, inspect the resulting logic, test behaviour and iterate on the product.
+
+It should therefore be read as evidence of **AI-assisted prototyping, agentic-system thinking and implementation literacy**, not as a claim that every line of Python was written manually or that this is production-grade software engineering.
 
 ## Functional Python prototype
 
@@ -197,7 +210,8 @@ A portfolio version of the original prompt design is available in [`prompts/agen
 
 ## What this project demonstrates
 
-- Python implementation of an agentic workflow
+- AI-assisted Python prototyping
+- Translation of an existing AI concept into an executable workflow
 - Multi-agent system decomposition
 - Sequential workflow orchestration
 - Task routing and classification
@@ -206,17 +220,16 @@ A portfolio version of the original prompt design is available in [`prompts/agen
 - Structured outputs with Python dataclasses
 - Conflict-aware decision logic
 - Debuggable execution traces
-- Unit testing
-- Streamlit interface development
+- Test-driven validation of key workflow behaviours
+- AI-assisted Streamlit interface prototyping
 - Translation of backend workflow logic into a user-facing prototype
 - Human-friendly response synthesis
-- Translation of a conceptual AI architecture into a working prototype
 
 ## Project status
 
 **Working portfolio prototype with CLI and web interface.**
 
-The repository contains the original system-design documentation, a functional Python implementation of the workflow and a Streamlit interface for interactive demonstration. The current prototype is rule-based and educational; it is **not** a production laundry-care service and does not provide guaranteed garment-care correctness.
+The repository contains the original system-design documentation, an AI-assisted Python implementation of the workflow and a Streamlit interface for interactive demonstration. The current prototype is rule-based and educational; it is **not** a production laundry-care service and does not provide guaranteed garment-care correctness.
 
 Possible future iterations include:
 
@@ -237,4 +250,4 @@ Possible future iterations include:
 
 ### About this portfolio project
 
-This repository reframes an academic group project as a professional case study focused on **agent architecture, orchestration, scope control, implementation and user-facing prototyping**.
+This repository reframes and extends an academic group project as a professional case study focused on **agent architecture, orchestration, scope control, AI-assisted implementation and user-facing prototyping**.
